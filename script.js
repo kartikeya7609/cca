@@ -2,9 +2,11 @@ let currentIndex = 0;
 const nextButton = document.querySelector('#next');
 const prevButton = document.querySelector('#prev');
 const slides = document.querySelector('.carousel-slides');
+const close = document.querySelector(".fa-square-xmark")
 const totalSlides = slides.children.length;
 function moveSlide(direction) {
   currentIndex += direction;
+
   if (currentIndex < 0) {
     currentIndex = totalSlides - 1;
   } else if (currentIndex >= totalSlides) {
@@ -34,6 +36,7 @@ function closeSidebar() {
   const sidebar = document.getElementById('sidebar');
   sidebar.classList.remove('active'); 
 }
+close.addEventListener("click",closeSidebar)
 document.addEventListener('click', (event) => {
   const sidebar = document.getElementById('sidebar');
   const toggleButton = document.querySelector('.menu-icon');
