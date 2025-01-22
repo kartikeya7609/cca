@@ -170,8 +170,14 @@ body {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-
+.footer1{
+  justify-content: space-around;
+  gap:50px;
+}
 
 #my_only_id {
     display: flex;
@@ -284,4 +290,13 @@ body {
 .sidebar.active {
   display: block;
   z-index: 20;
+}
+.fa-square-instagram{
+  color:#000;
+}
+.fa-envelopes-bulk{
+  color:#000;
+}
+.fa-square-x-twitter{
+  color:black
 }
