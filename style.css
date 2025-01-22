@@ -43,10 +43,13 @@ body {
   right:20px;
   background-color: #777;
   color:black;
-  border: none;
+  border: 2px solid #777;
   font-size:x-large;
 }
-
+.menu-icon:hover{
+  border: 2px solid black;
+  font-size:xx-large;
+}
 .sidebar ul li a {
   text-decoration: none;
   color: #333;
@@ -60,11 +63,21 @@ body {
   background-color: #ddd;
   color: #000;
 }
+/* Sidebar hidden initially */
+.sidebar {
+  transform: translateX(100%); /* Off-screen (right side) */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar visible when 'active' class is added */
+.sidebar.active {
+  transform: translateX(0); /* Slide into view */
+}
 
 .image-carousel {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 600px;
   background: grey;
   overflow: hidden;
 }
@@ -84,8 +97,10 @@ body {
   flex: 0 0 100%;
   text-align: center;
   font-size: 1.5rem;
-  line-height: 400px;
+  line-height: 600px;
   color: #fff;
+
+  object-fit: center;
 }
 
 .carousel-btn {
@@ -140,13 +155,13 @@ body {
 }
 
 .image-placeholder {
-    background: #ddd;
     height: 100px;
-    width:200px;
+    width:auto;
     line-height: 100px;
     font-size: 1rem;
     color: #777;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .footer {
@@ -189,6 +204,7 @@ body {
         width: 160px;
     }
     .image-placeholder {
+      width:auto;
         height: 80px;
         line-height: 80px;
     }
