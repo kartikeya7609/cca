@@ -253,7 +253,6 @@ body {
         transform: translateX(0);
     }
 }
-
 @media screen and (max-width: 768px) {
     
     .image-carousel {
@@ -285,6 +284,7 @@ body {
   display: flex;
   gap:10px;
   cursor:pointer;
+justify-content: center;
 }
 @media screen and (max-width: 480px) {
     .image-carousel {
